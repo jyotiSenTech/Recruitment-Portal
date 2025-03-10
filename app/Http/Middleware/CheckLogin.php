@@ -15,10 +15,10 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // if ($request->session()->get('sess_role') == null) {
-        //     // return redirect('/login');
-        //     return redirect('/');
-        // }
+        if ($request->session()->get('sess_role') == null) {
+            // return redirect('/login');
+            return redirect('/');
+        }
         return $next($request);
     }
 
