@@ -1,0 +1,40 @@
+$(document).ready(function(){
+
+	$('.owl-carousel-01').owlCarousel({
+		loop:true,
+		margin:15,
+		nav:false,
+		dots:true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	})
+
+	$('.owl-carousel-04').owlCarousel({
+		loop:true,
+		margin:0,
+		nav:true,
+		dots:false,
+		center:true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:4
+			}
+		}
+	})
+
+});

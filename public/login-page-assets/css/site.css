@@ -1,0 +1,283 @@
+main>.container {
+    padding: 70px 15px 20px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+
+.footer>.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after,
+a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th,
+.grid-view td:last-child {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li>form>button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li>form>button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav>li>form>button.logout:focus,
+.nav>li>form>button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav>li>form>button.logout:focus {
+    outline: none;
+}
+
+thead {
+    color: #007bff;
+}
+
+/* for card header height */
+.card-header {
+    height: 2.5rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* for datepicker validation */
+input[type=date][aria-invalid='true'] {
+    border: 1px solid #f00;
+}
+
+input[type=date][aria-invalid='false'] {
+    border: 1px solid rgb(14, 158, 14);
+}
+
+/* for textinput validation */
+input[type=text][aria-invalid='true'] {
+    border: 1px solid #f00;
+}
+
+input[type=text][aria-invalid='false'] {
+    border: 1px solid rgb(14, 158, 14);
+}
+
+/* for password feild validation */
+input[type=password][aria-invalid='true'] {
+    border: 1px solid #f00;
+}
+
+input[type=password][aria-invalid='false'] {
+    border: 1px solid rgb(14, 158, 14);
+}
+
+.content-header {
+    padding: 4px 0rem;
+}
+
+/* for dashboard card header */
+.header-height {
+    height: 3rem !important;
+}
+
+/* for validation error message */
+.help-block {
+    color: red;
+}
+
+/* to add asterisk for required feild */
+form div.required label.control-label:after {
+    content: " * ";
+    color: red;
+}
+
+/* login footer */
+.loginfooter {
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 50px;
+    background-color: #343a40;
+}
+
+/* Style for self assesment form table */
+.table-style th,
+.table-style td {
+    padding: 0px;
+    padding-top: 15px;
+}
+
+.table-style th,
+.table-style td {
+    text-align: center !important;
+}
+
+/* Css for Property Approval Page Table */
+.tr-design {
+    background-color: #607d8be0 !important;
+    color: white;
+}
+
+.th-design {
+    background-color: #6c757d !important;
+    color: white;
+}
+
+.field-floorwisecalculatedtaxinfo-0-covered_area, .field-floorwisecalculatedtaxinfo-0-building_age {
+    width: 100px;
+}
+
+/* End */
+
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+#goog-gt-tt {
+    display: none !important;
+    top: 0px !important;
+}
+
+.goog-text-highlight {
+    background-color: transparent !important;
+}
+
+select {
+    outline: none;
+}
+
+body {
+    top: 0px !important;
+}
+
+.fa,
+.fas {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.auth-button {
+    background-color: #3498db;
+    border: 2px solid #f8f9fa;
+    color: #f8f9fa !important;
+    font-size: 14px;
+    font-weight: 540;
+    border-radius: 8px;
+    width: 132%;
+    text-align: center;
+}
+
+/* .sidebar {
+    height: calc(100% - (3.5rem + 1px));
+    overflow-x: hidden;
+    overflow-y: initial;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0;
+} */
+
+p {
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.brand-link .brand-image {
+    margin-left: -0.2rem;
+    margin-top: -10px;
+    max-height: 50px;
+}
+
+span {
+    font-size: 14px;
+}
+
+[class*=sidebar-dark-] {
+    background-color: #212529;
+}
+
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active,
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:focus,
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+[class*=sidebar-dark] .brand-link {
+    border-bottom: 1px solid #fd1414;
+}
+
+[class*=sidebar-dark-] .sidebar a {
+    color: #f8f9fa;
+    font-size: 15px;
+}
