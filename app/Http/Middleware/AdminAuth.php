@@ -16,11 +16,11 @@ class AdminAuth
      */
     public function handle(Request $request, Closure $next)
     {
-        // if (!empty($request->session()->get('sess_role'))) {
-        //     return $next($request);
-        // } else {
-        //     //session not set case
-        //     return redirect('/')->with('error', 'कृपया लॉगिन करें !!!');
-        // }
+        if (!empty($request->session()->get('sess_role'))) {
+            return $next($request);
+        } else {
+            //session not set case
+            return redirect('/')->with('error', 'कृपया लॉगिन करें !!!');
+        }
     }
 }

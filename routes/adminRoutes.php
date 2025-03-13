@@ -17,11 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::post('/validate-user', [LoginController::class, 'validate_user']);
+
+Route::middleware(['web'])->group(function () {
 Route::middleware([CheckLogin::class])->group(function () {
     // Route::group(['middleware' => 'check.adminAuth'], function () {
 
     Route::get('/admin-dashboard', [AdminController::class, 'dashboard']);
-    Route::post('/validate-user', [LoginController::class, 'validate_user']);
     Route::get('/application-list/{pref_dist?}', [AdminController::class, 'application_list']);
     Route::get('/verified-list/{pref_dist?}', [AdminController::class, 'verified_list']);
     Route::get('/rejected-list/{pref_dist?}', [AdminController::class, 'rejected_list']);
@@ -42,4 +45,5 @@ Route::middleware([CheckLogin::class])->group(function () {
     Route::post('/get-sector', [AdminMasterController::class, 'get_sector']);
     Route::post('/get-awc', [AdminMasterController::class, 'get_awc']);
 
+});
 });

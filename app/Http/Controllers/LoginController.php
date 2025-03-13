@@ -23,6 +23,7 @@ class LoginController extends Controller
     public function validate_user(Request $request)
     {
         $status = 'failed';
+        $redirct_url = "";
         $errors = null;
         $validator = Validator::make(
             $request->all(),
@@ -43,10 +44,12 @@ class LoginController extends Controller
             $userCheck = User::where('Mobile_Number', $request->username)
                 ->where('Password', $password)
                 ->get();
-
+            // dd($userCheck);
             if ($userCheck->count() > 0) {
 
-                session([
+                // Session::start();
+
+                $request->session()->put([
                     'sess_id' => $userCheck[0]->ID,
                     'uid' => $userCheck[0]->ID,
                     'sess_fname' => $userCheck[0]->Full_Name,
@@ -55,6 +58,8 @@ class LoginController extends Controller
                     'admin_pic' => $userCheck[0]->admin_pic,
                     'district_id' => $userCheck[0]->admin_district_id,
                 ]);
+
+                Session::save();
 
                 $redirct_url = $this->role_wise_redirection($request);
                 $status = 'success';
@@ -73,6 +78,8 @@ class LoginController extends Controller
 
     private function role_wise_redirection($request)
     {
+
+        // dd(Session::get('sess_role'));
         if ($request->session()->get('sess_role') == 'Candidate') {
             return '/candidate/candidate-dashboard';
         } else if ($request->session()->get('sess_role') == 'Admin' || $request->session()->get('sess_role') == 'DPO' || $request->session()->get('sess_role') == 'CDPO') {

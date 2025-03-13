@@ -289,7 +289,7 @@ class CandidateController extends Controller
         }
     }
 
-    public function saveAppDetail(Request $request)
+    public function  saveAppDetail(Request $request)
     {
 
         $rules = [
